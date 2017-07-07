@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: condornodes
+spec:
+    replicas: 2
+    template:
+        metadata:
+            labels:
+                app: nodes
+        spec:
+            containers:
+            - name: condor-execute
+              image: condor-execute:v25
+              ports:
+                  - containerPort: 9618

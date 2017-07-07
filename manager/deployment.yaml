@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: condornodes
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: condornodes
+        spec:
+            containers:
+            - name: condormanger
+              image: condor:a5
+              ports:
+                  - containerPort: 9618
+----
+apiVersion: v1
+kind: Service
+metadata: condor-master
+    labels:
+        name: condormanager
+spec:
+    ports:
+        -port: 9816
+    selector:
+        name: condormanager

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: condor-execute
+    labels:
+        app: execute
+spec:
+    containers:
+    - name: condor-execute
+      image: condor-execute:v25
+      ports:
+          - containerPort: 9618
