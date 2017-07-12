@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: condorexternal
+    labels:
+        app: execute
+spec:
+    containers:
+    - name: condorexternal
+      image: srp3/condorexternal:v7
+      ports:
+          - containerPort: 9618

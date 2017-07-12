@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: condorexternal
+spec:
+    replicas: 6
+    template:
+        metadata:
+            labels:
+                app: nodes
+        spec:
+            containers:
+            - name: condorexternal
+              image: srp3/condorexternal:v7
+              ports:
+                  - containerPort: 9618
