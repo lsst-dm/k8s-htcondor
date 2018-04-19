@@ -1,4 +1,4 @@
-FROM lsstsqre/centos:7-stack-lsst_distrib-v13_0
+FROM lsstsqre/centos:7-stack-lsst_distrib-v15_0
 
 USER root
 WORKDIR /root
