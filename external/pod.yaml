@@ -7,6 +7,6 @@ metadata:
 spec:
     containers:
     - name: condorexternal
-      image: srp3/condorexternal:v7
+      image: srp3/condorexternal:v15
       ports:
           - containerPort: 9618

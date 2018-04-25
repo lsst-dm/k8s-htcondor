@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM srp3/stack:v15
 
 USER root
 WORKDIR /root

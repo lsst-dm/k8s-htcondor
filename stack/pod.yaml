@@ -7,6 +7,6 @@ metadata:
 spec:
     containers:
     - name: stack
-      image: srp3/stack:v5
+      image: srp3/stack:v15
       ports:
           - containerPort: 9618
